@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Accountant portal</title>
+
+<script type="text/javascript">
+            function validate2(){
+                var name=document.regform.name.value;
+                var email=document.regform.email.value;
+                
+                var password=document.regform.password.value;
+              
+                var mobile=document.regform.mobile.value;
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;  
+                var passw=  /^[A-Za-z]\w{5,14}$/;
+                var phoneno = /^\d{10}$/;
+                
+                //window.alert(conpassword);
+                if(name.length<=2){
+                    window.alert("Name should have more than 2 characters");
+                    return false;
+                }
+                if (!filter.test(email)) {
+                    window.alert('Please provide a valid email address');
+                    //email.focus;
+                    return false;
+                }
+               
+                
+                if(!passw.test(password)){
+                    window.alert("password between 8 to 16 characters which contain only characters, numeric digits, underscore and first character must be a letter");
+                    return false;
+                }
+              
+                if(!phoneno.test(mobile)){
+                    window.alert("Phone number should have 10 digits and no alphabets or symbols");
+                    return false;
+                }
+               
+            }
+        </script>
+
+
+<style>
+            body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt22vZUzseJvP9bKhj6e43l4c_Rad3dYPdwQ&usqp=CAU');
+           background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative
+            }
+            input[type=number],input[type=text],input[type=password], select {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: medium;
+            text-align:center;
+            box-sizing: border-box;
+            }
+            div{
+                text-align: center;
+            }
+            input[type=submit] {
+            width: 40%;
+            background-color:black;
+            color: white;
+            font-weight:bold;
+            font-size: medium;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+
+<br><br>
+        <h1 style="color:white;"><center>Accountant Portal</center></h1>
+        <h2 style="color:black;"><center>Add student</center></h2>
+        <br><br>
+        <div>
+            <center>
+            <form id="contactform" name="regform" onsubmit="return validate2()"
+              method="POST" action="addstudent.jsp">
+			    
+                <label for="name" style="color:white; font-size: medium;"><b>Name </b> </label><br>
+                <input id = "name" type="text" name="name" placeholder="Enter name"  required><br><br>
+                
+                <label for="email" style="color:white; font-size: medium;"><b>Email Id</b> </label><br>
+                <input id = "email" type="text" name="email" placeholder="Enter email" required><br><br>
+               
+                <label for="mobile" style="color:white; font-size: medium;"><b>Mobile number</b> </label><br>
+                <input id = "mobile" type="number" minlength="10" name="mobile" placeholder="Enter mobile" pattern="[-+]?[0-9]*[.,]?[0-9]+" required><br><br>
+ 
+                
+                <label for="rollno" style="color:white; font-size: medium;"><b>Roll number </b> </label><br>
+                <input id = "rollno" type="number" minlength-"6" name="rollno" placeholder="Enter roll number" pattern="[-+]?[0-9]*[.,]?[0-9]+" required><br><br>
+                
+                <label for="year" style="color:white; font-ssize: medium;"><b>Year</b></label>
+                
+                <br>
+                <select name="year">
+                    
+                    <option value=1>Year 1</option>
+                    <option value=2>Year 2</option>
+                    <option value=3>Year 3</option>
+                    <option value=4>Year 4</option>
+                    <option value=5>Year 5</option>
+                    
+                  </select><br><br>
+                  
+                 <label for="dept" style="color:white; font-ssize: medium;"><b>Department</b></label>
+                
+                <br>
+                <select name="dept">
+                    
+                    <option value="BE">BE</option>
+                    <option value="MSc">MSc</option>
+                    <option value="MCA">MCA</option>
+                    <option value="MBA">MBA</option>
+                   
+                    
+                  </select>
+               	<br><br>
+               	<label for="password" style="color:white; font-size: medium;"><b>password</b> </label><br>
+                <input id = "password" type="password" name="password" placeholder="Enter pasword" required><br><br>
+
+               
+               <input type="submit" value="ADD">
+            </form>
+            </center>
+        </div>
+
+</body>
+</html>

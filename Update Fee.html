@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+	  margin: 0;
+	  padding: 0;
+      }
+	  body{
+	  	background-image: url(4.jpg);
+	  	background-position: center;
+	  	background size: cover;
+	  	font-family: sans-serif;
+	  	margin-top: 40px;
+          }
+   .regform{
+   	         width: 800px;
+   	         background-color: rgb(0,0,0,0.6);
+   	         margin: auto;
+   	         color: #FFFFFF;
+   	         padding: 10px 0px 10px 0px;
+   	         text-align: center;
+   	         border-radius: 15px 15px 0px 0px;
+           }
+   .main{
+  	    background-color: rgb(0,0,0,0.5);
+  	    width: 800px;
+  	    margin: auto;
+       }
+     form{
+     	  padding: 10px;
+     	 }
+   .roll{
+  	    position:relative;
+  	     left: 200px;
+  	     top: -37px;
+  	     line-height: 40px;
+  	     width:480px;
+  	     border-radius: 6px;
+  	     padding: 0 22px;
+  	     font-size: 16px;
+  	     color: #555;
+       }
+   .option{
+ 	     position:relative;
+  	     left: 200px;
+  	     top: -37px;
+  	     line-height: 40px;
+  	     width:532px;
+  	     height: 40px;
+  	     border-radius: 6px;
+  	     padding: 0 22px;
+  	     font-size: 16px;
+  	     color: #555;
+  	     outline: none;
+  	     overflow: hidden;
+        }
+  .pay{
+  	    position:relative;
+  	     left: 200px;
+  	     top: -37px;
+  	     line-height: 40px;
+  	     width:480px;
+  	     border-radius: 6px;
+  	     padding: 0 22px;
+  	     font-size: 16px;
+  	     color: #555;
+       }  
+   button{ 
+           display: block;
+           margin: 20px 0px 0px 20px;
+           text-align: center;
+           border-radius: 12px;
+           border: 2px solid #366473;
+           padding: 14px 50px;
+           text-transform: uppercase;
+           outline: none;
+           color: #2196f3;
+           cursor: pointer;
+           transition: 0.2px;
+          }
+     button:hover{
+     	          color: #255784;
+     	          background-color: #2196f3;
+     	          box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3;
+     	          transition-delay: 0.5s;
+                 }
+	</style>
+	 
+</head>
+<body>
+	<div class="regform"> <h1> UPDATE FEE</h1></header></div>
+	<div class ="main">
+		<form>
+			
+			<h2 class="name">Roll Number</h2>
+			<input class="roll" type="text" name="roll" placeholder="Enter the RollNo" required="required">
+
+			<h2 class="name"> Year </h2>
+			<select class="option" name="year">
+			<option disabled="disabled" selected="selected">--Choose Option</option>
+			<option> 1st year</option>
+			<option> 2nd year</option>
+			<option> 3rd year</option>
+			<option> 4th year</option>
+			<option> 5th year</option>
+
+
+			</select>
+
+			<h2 class="name"> Department </h2>
+			<select class="option" name="Department">
+			<option disabled="disabled" selected="selected">--Choose Option</option>
+			<option> BE</option>
+			<option> MSC</option>
+			<option> MCA</option>
+			<option> MBA</option>
+
+
+			</select>
+
+			<h2 class="name">Fee</h2>
+			<input class="pay" type="text" name="pay" placeholder="Enter Paying Fee" required="required">
+
+			<h2><center><button type="submit">Submit</button></h2>
+
+			<h2><center><button type="submit">Back</button></h2>	
+		</form>
+
+</body>
+</html>

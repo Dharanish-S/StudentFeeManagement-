@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<style>
+
+.mySlides {display:none;}
+img.rounded-corners {
+  border-radius: 30px;
+}
+
+* {
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+        }
+        body {
+            background: white;
+        }
+  
+        .container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+
+        }
+  
+        .container span {
+            display: block;
+        }
+  
+        .text1 {
+            color: white;
+            background-color:rgba(0,0,0,0.5);
+            font-size: 70px;
+            font-weight: 700;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            position: relative;
+            animation: text 3s 1;
+            font-family: Trebuchet MS;
+        }
+  
+      
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: black;
+}
+</style>
+		
+	</head>
+	<body>
+	
+<ul>
+	  <li  style="float:right"><a class="active" a href="logout.jsp">Logout</a></li>
+     <li  style="float:right"><a class="active" a href="summary.jsp">Summary</a></li>
+  <li style="float:right"><a class="active" a href="addstudent.html">Add student</a></li>
+  <li style="float:right"><a class="active" a href="addnewfee.jsp">Add new fee</a></li>
+  <li style="float:right"><a class="active" a href="updatefee.html">Update fee</a></li>
+  <li style="float:right"><a class="active" a href="viewstudent.jsp">View due list</a></li>
+
+</ul>
+
+ 
+
+<div id="main"></div>
+ 
+<div class="w3-white">
+  <div class="w3-content w3-section" style="background-size:cover">
+  <img class="mySlides" src= "https://images.shiksha.com/mediadata/images/1541414890phpXPcMA4.png" width="1366px" height="603px">
+  <img class="mySlides" src="https://proplusacademy.com/wp-content/uploads/2019/05/gallery-1-min.jpg" width="1366px" height="603px">
+</div>
+<div class="container">
+  <div class="row">
+      <span class="text1">ACCOUNTANT PORTAL</span>
+      </div>
+</div>
+</div>
+</body>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+	
+		
+
+	</body>
+	</html>
